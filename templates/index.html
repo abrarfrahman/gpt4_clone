@@ -2,78 +2,59 @@
 <html>
 <head>
     <title>Chat Interface</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .conversation {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        .conversation p {
-            margin: 5px 0;
-        }
-
-        input[type="text"] {
-            width: calc(100% - 100px);
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007bff;
-            border: none;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        .message-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Chat Interface</h1>
-        {% for conversation_id, messages in conversations.items() %}
-        <div class="conversation">
-            {% for message in messages %}
-            <p>{{ message }}</p>
-            {% endfor %}
+        <div class="conversations">
+            <h2>Conversations</h2>
+            <div class="conversation">
+                <p><strong>Conversation 1</strong></p>
+                <p>Date: March 6, 2024</p>
+                <div class="conversation-options">
+                    <select>
+                        <option value="archive">Archive</option>
+                        <option value="delete">Delete</option>
+                        <option value="export">Export HTML</option>
+                    </select>
+                    <button>New Chat</button>
+                </div>
+            </div>
+            <div class="conversation">
+                <p><strong>Conversation 2</strong></p>
+                <p>Date: March 5, 2024</p>
+                <div class="conversation-options">
+                    <select>
+                        <option value="archive">Archive</option>
+                        <option value="delete">Delete</option>
+                        <option value="export">Export HTML</option>
+                    </select>
+                    <button>New Chat</button>
+                </div>
+            </div>
+            <!-- Add more conversations here -->
         </div>
-        {% endfor %}
-        <div class="message-container">
-            <form id="message-form" action="/submit_message" method="post">
-                <input type="hidden" name="conversation_id" value="{{ conversation_id }}">
-                <input type="text" name="message" placeholder="Type your message...">
-                <input type="submit" value="Send">
-            </form>
+        <div class="chat">
+            <h2 class="chat-title">Chat</h2>
+            <div class="chat-messages">
+                <!-- Messages will be displayed here -->
+                <div class="chat-message">
+                    <p class="chat-message-user">User</p>
+                    <p class="chat-message-content">Hello! How can I help you today?</p>
+                </div>
+                <div class="chat-message">
+                    <p class="chat-message-user">AI</p>
+                    <p class="chat-message-content">I'm here to assist you with any questions or tasks you have.</p>
+                </div>
+                <!-- Add more messages here -->
+            </div>
+            <div class="message-container">
+                <form id="message-form" action="/submit_message" method="post">
+                    <input type="hidden" name="conversation_id" value="1">
+                    <input type="text" name="message" placeholder="Type your message...">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
         </div>
     </div>
     <script>
@@ -88,7 +69,7 @@
                 if (response.ok) {
                     form.reset();
                     form.querySelector('input[name="message"]').focus();
-                    location.reload(); // Reload the page to update the conversations
+                    // Reload the chat conversation here
                 }
             });
         };
