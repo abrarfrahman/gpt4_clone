@@ -1,6 +1,6 @@
-# ChatWTF
+# GPT4 Clone
 
-This is a ChatGPT-like chatbot that uses the ChatGPT API. It was created for my YouTube channel. You can find the playlist of videos [here](https://www.youtube.com/watch?v=ru5m-BKDn6E&list=PLz8w2NTEwxvqH7yCAp6PAL0dKeiVU7uv4).
+This is a ChatGPT-like chatbot that uses the ChatGPT API. This is my attempt to circumvent not having GPT Plus!
 
 ## Quick Start
 
