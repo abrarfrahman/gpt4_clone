@@ -27,7 +27,7 @@ send_button.addEventListener( "click", function( e ) {
 } );
 
 /**
- * Submits the currently typed in message to ChatWTF
+ * Submits the currently typed in message to Chatbrar
  */
 function submit_message() {
     add_message( "user", escapeHtml( message_input.value ) );

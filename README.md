@@ -1,4 +1,4 @@
-# ChatWTF
+# Chatbrar
 
 This is a ChatGPT-like chatbot that uses the ChatGPT API. It was created for my YouTube channel. You can find the playlist of videos [here](https://www.youtube.com/watch?v=ru5m-BKDn6E&list=PLz8w2NTEwxvqH7yCAp6PAL0dKeiVU7uv4).
 
@@ -17,8 +17,8 @@ $ php -S localhost:8080
 ## Docker
 
 ```console
-$ sudo docker build -t chatwtf .
-$ sudo docker run -p 8080:80 chatwtf
+$ sudo docker build -t chatbrar .
+$ sudo docker run -p 8080:80 chatbrar
 ```
 
 Note: If you get `caught SIGWINCH, shutting down gracefully`, add the `-d` flag to run it in the background.

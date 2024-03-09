@@ -36,7 +36,7 @@ $speech_enabled = isset( $settings['speech_enabled'] ) && $settings['speech_enab
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>ChatWTF</title>
+    <title>Chatbrar</title>
     <script>
         let base_uri = '<?php echo $base_uri; ?>';
         let chat_id = <?php echo intval( $chat_id ); ?>;
@@ -146,7 +146,7 @@ $speech_enabled = isset( $settings['speech_enabled'] ) && $settings['speech_enab
             </div>
 
             <div class="logo">
-                ChatWTF
+                Chatbrar
             </div>
         </div>
 
@@ -155,7 +155,7 @@ $speech_enabled = isset( $settings['speech_enabled'] ) && $settings['speech_enab
                 <textarea id="message" rows="1" placeholder="Send a message"></textarea>
                 <button id="send-button"><i class="fa fa-paper-plane"></i></button>
             </div>
-            <div class="disclaimer">ChatWTF uses the OpenAI ChatGPT API but is not affiliated with OpenAI</div>
+            <div class="disclaimer">Chatbrar is not affiliated with OpenAI</div>
         </div>
     </main>
     <script src="<?php echo $base_uri; ?>assets/js/script.js"></script>

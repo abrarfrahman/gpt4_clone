@@ -1,5 +1,5 @@
 <?php
-$db = __DIR__."/chatwtf.db";
+$db = __DIR__."/chatbrar.db";
 
 if( file_exists( $db ) ) {
     die( "ERROR: Database already exists.\n" );
